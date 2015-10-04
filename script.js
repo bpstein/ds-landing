@@ -4,7 +4,7 @@ $(document).ready(function(){
     section: "section",
     sectionName: "section-name",
     easing: "easeOutExpo",
-    scrollSpeed: 1100,
+    scrollSpeed: 500,
     offset: 0,
     scrollbars: true,
     before: function() {},
