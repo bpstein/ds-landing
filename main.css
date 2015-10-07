@@ -154,8 +154,9 @@ header {
 	background:hsl(184,65%,49%);
 	text-align:center;
 }
-.overview {
-	background:hsl(350,92%,59%);
+.firstdate {
+	background-image: url('img/datespot.jpg')
+
 
 }
 .configuration {
