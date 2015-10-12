@@ -14,6 +14,13 @@
   overflow:hidden;
 }
 
+.side-buffer {
+	width: 50px;
+  min-width: 10px;
+	-webkit-flex: initial;
+          flex: initial;
+}
+
 .scenario {
 	padding: 5px;
 	text-align: center;
@@ -26,14 +33,23 @@
           flex: 3;
 }
 
+.phone-placeholder {
+	-webkit-flex: 2;
+          flex: 2;
+}
+
 .response {
 	padding: 5px;
 	text-align: center;
 	position: relative;
 	text-transform: uppercase;
 	margin-top: 250px;
-		-webkit-flex: 3;
+	-webkit-flex: 3;
           flex: 3;
+}
+
+.detail-text {
+	text-transform: none;
 }
 
 .tagline {
@@ -67,6 +83,7 @@
 	background-image: url('img/firstdate.jpg');
 	height: 100%;
 	width: 100%;
+	color: #444;
   -webkit-background-size: cover;
   	 -moz-background-size: cover;
   		 -o-background-size: cover;
@@ -131,7 +148,7 @@
 		  			  filter: blur(1px);*/
 }
 
-/************GET WEIRD SECTION***********/
+/************DISCOVERY SECTION***********/
 .discover {
 	background: no-repeat center;
 	background-image: url('img/discover.jpg');
