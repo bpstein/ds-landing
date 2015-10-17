@@ -4,6 +4,10 @@
 	top: 190px;
 }
 
+/************LOGO**********/
+
+
+/************GLOBAL STRUCTURE AND STYLING***********/
 .flexbox-container {
 	display: -webkit-flex;
   display: flex;
@@ -24,10 +28,9 @@
 .scenario {
 	padding: 5px;
 	text-align: center;
-	vertical-align: 50%;
 	text-transform: uppercase;
-	margin-top: 250px;
 	z-index: 15;
+	top: 40%;
 	position: relative;
 	-webkit-flex: 3;
           flex: 3;
@@ -43,7 +46,8 @@
 	text-align: center;
 	position: relative;
 	text-transform: uppercase;
-	margin-top: 250px;
+	top: 40%;
+	position: relative;
 	-webkit-flex: 3;
           flex: 3;
 }
@@ -53,6 +57,11 @@
 	font-family: 'Enriqueta', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 	font-size: 14px;
 	font-weight: normal;
+	width: 60%;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .tagline {
@@ -62,6 +71,7 @@
 	font-size: 40px;
 }
 
+/************PHONE STYLING***********/
 .imgPlaceholder {
 	border-color: #000;
 	padding: 5px;
@@ -80,10 +90,49 @@
 
 }
 
+/************HEART STYLING***********/
+.heart {
+	width: 20%;
+	height: auto;
+	display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  animation: beat 1s infinite; 
+}
+
+@keyframes beat {
+	from {
+		transform: scale(1);
+		transform-origin: center center;
+		animation-timing-function: ease-out;
+	}
+
+	10% {
+		transform: scale(1.1);
+		animation-timing-function: ease-in;
+	}
+
+	15% {
+		transform: scale(1);
+		animation-timing-function: ease-out;
+	}
+
+	20% {
+		transform: scale(1.06);
+		animation-timing-function: ease-in;
+	}
+
+	30% {
+		transform: scale(1);
+		animation-timing-function: ease-out;
+	}
+}
+
 /************FIRST DATE SECTION***********/
 .firstdate { 
 	background: no-repeat center;
-	background-image: url('img/firstdate.jpg');
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), 
+	url('img/firstdate.jpg');
 	height: 100%;
 	width: 100%;
 	color: #FFF;
@@ -91,86 +140,64 @@
   	 -moz-background-size: cover;
   		 -o-background-size: cover;
   				background-size: cover;
-
-		/*Optional background effects*/
-		/*	background-image: linear-gradient(to bottom, 
-				rgba(71, 163, 209, 0.9) 0%, 
-				rgba(71, 163, 209, 0.9) 100%), */
-		/*  -webkit-filter: blur(1px);
-		     -moz-filter: blur(1px);
-		  		 -o-filter: blur(1px);
-		  		-ms-filter: blur(1px);
-		  			  filter: blur(1px);*/
 }
 
 .firstdate-textbox {
 	z-index: 15;
 }
 
+/************FIND THAT BAR SECTION***********/
+.findthatbar {
+	background: no-repeat center;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), 
+	url('img/justdrinks.jpg');
+	height: 100%;
+	width: 100%;
+	color: #FFF;
+  -webkit-background-size: cover;
+  	 -moz-background-size: cover;
+  		 -o-background-size: cover;
+  				background-size: cover;
+}
+
 /************DINNER DATE SECTION***********/
 .dinnerdate {
 	background: no-repeat center;
-	background-image: url('img/dinnerdate.jpg');
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), 
+	url('img/dinnerdate.jpg');
 	height: 100%;
 	width: 100%;
+	color: #FFF;
   -webkit-background-size: cover;
   	 -moz-background-size: cover;
   		 -o-background-size: cover;
   				background-size: cover;
-
-		/*Optional background effects*/
-		/*	background-image: linear-gradient(to bottom, 
-				rgba(43, 196, 206, 0.9) 0%, 
-				rgba(43, 196, 206, 0.9) 100%), */
-		/*  -webkit-filter: blur(1px);
-		     -moz-filter: blur(1px);
-		  		 -o-filter: blur(1px);
-		  		-ms-filter: blur(1px);
-		  			  filter: blur(1px);*/
 }
 
-/************GET WEIRD SECTION***********/
+/************HIDDEN GEMS SECTION***********/
 .hiddengems {
 	background: no-repeat center;
-	background-image: url('img/hiddengems.jpg');
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), 
+	url('img/hiddengems.jpg');
 	height: 100%;
 	width: 100%;
   -webkit-background-size: cover;
   	 -moz-background-size: cover;
   		 -o-background-size: cover;
   				background-size: cover;
-
-		/*Optional background effects*/
-		/*	background-image: linear-gradient(to bottom, 
-				rgba(43, 196, 206, 0.9) 0%, 
-				rgba(43, 196, 206, 0.9) 100%), */
-		/*  -webkit-filter: blur(1px);
-		     -moz-filter: blur(1px);
-		  		 -o-filter: blur(1px);
-		  		-ms-filter: blur(1px);
-		  			  filter: blur(1px);*/
 }
 
 /************DISCOVERY SECTION***********/
 .discover {
 	background: no-repeat center;
-	background-image: url('img/discover.jpg');
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), 
+	url('img/discover.jpg');
 	height: 100%;
 	width: 100%;
   -webkit-background-size: cover;
   	 -moz-background-size: cover;
   		 -o-background-size: cover;
   				background-size: cover;
-
-		/*Optional background effects*/
-		/*	background-image: linear-gradient(to bottom, 
-				rgba(43, 196, 206, 0.9) 0%, 
-				rgba(43, 196, 206, 0.9) 100%), */
-		/*  -webkit-filter: blur(1px);
-		     -moz-filter: blur(1px);
-		  		 -o-filter: blur(1px);
-		  		-ms-filter: blur(1px);
-		  			  filter: blur(1px);*/
 }
 
 h1 {}

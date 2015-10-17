@@ -17,14 +17,16 @@ $(document).ready(function(){
 
   $(window).scroll(function() {
 
+
     if ($(this).scrollTop()>0) {
-      $('.iPhone').fadeIn();
-      $('#phoneImage').fadeIn();
+      $('.iPhone').fadeOut();
+      $('#phoneImage').fadeOut();
+      $('detail-text').fadeIn();
     }
 
     else {
-      $('.iPhone').fadeOut();
-      $('#phoneImage').hide();
+      $('.iPhone').fadeIn();
+      $('#phoneImage').show();
     }
   });
 
