@@ -12,23 +12,30 @@ $(document).ready(function(){
     afterResize: function() {}
   });
 
-  $('iPhone').hide();
-  $('#phoneImage').hide();
+  $('.iPhone').hide();
 
-  $(window).scroll(function() {
-
-
-    if ($(this).scrollTop()>0) {
-      $('.iPhone').fadeOut();
-      $('#phoneImage').fadeOut();
-      $('detail-text').fadeIn();
-    }
-
-    else {
-      $('.iPhone').fadeIn();
-      $('#phoneImage').show();
-    }
+  $('.about').scroll(function() {
+    ('.iPhone').fadeOut();
+    ('#phoneImage').fadeOut();
   });
+
+  // $('iPhone').hide();
+  // $('#phoneImage').hide();
+
+  // $(window).scroll(function() {
+
+
+  //   if ($(this).scrollTop()>0) {
+  //     $('.iPhone').fadeOut();
+  //     $('#phoneImage').fadeOut();
+  //     $('detail-text').fadeIn();
+  //   }
+
+  //   else {
+  //     $('.iPhone').fadeIn();
+  //     $('#phoneImage').show();
+  //   }
+  // });
 
 // $(window).scroll(function(){
 //   var threshold = 200; // number of pixels before bottom of page that you want to start fading
