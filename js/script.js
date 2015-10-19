@@ -12,12 +12,44 @@ $(document).ready(function(){
     afterResize: function() {}
   });
 
-  $('.iPhone').hide();
+  $(window).scroll(function(){
 
-  $('.about').scroll(function() {
-    ('.iPhone').fadeOut();
-    ('#phoneImage').fadeOut();
+    // var panelClass = $('.panel').data('section-name');
+    // alert(panelClass);
+
+    var scrollPos = $(document).scrollTop();
+
+    // Fades in the iPhone placeholder image depending on scroll position
+    if (scrollPos > 1750) {
+      $('#phoneImage').fadeOut(600);
+    }
+
+    else {
+      $('#phoneImage').fadeIn(800);
+    }
+
+    if($('.panel').is(':visible')) {
+      $('.response').addClass('response-up');
+      $('.response-up').fadeIn(600);
+    }
+
+      //   $(window).scroll(function() {
+//     if ($('.panel home').is(':visible')) {
+//       $('.phoneImage').hide();
+//     } 
+
+//     else ($('.phoneImage').hide())
+//   });
+
   });
+
+
+  // $('.iPhone').hide();
+
+  // $('.about').scroll(function() {
+  //   ('.iPhone').fadeOut();
+  //   ('#phoneImage').fadeOut();
+  // });
 
   // $('iPhone').hide();
   // $('#phoneImage').hide();
