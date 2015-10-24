@@ -33,12 +33,20 @@ $(document).ready(function(){
       // Check to see if the current element is within the viewport
       if ((element_bottom_position >= window_top_position) && 
          (element_top_position <= window_bottom_position)) {
+          // Animations and effects once screen is in viewport
+          $('.scenario').fadeIn(1000);
+          $('.response').fadeIn(2000);
+          $('.detail-text-left').hide(); 
+          $('.detail-text-right').hide();
           $element.addClass('viewable');
+          $('.detail-text-left').fadeIn(3500);
+          $('.detail-text-right').fadeIn(9500);
       }
 
       else {
         $element.removeClass('viewable');
       }
+
 
     });
   }
