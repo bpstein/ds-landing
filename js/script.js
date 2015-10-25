@@ -3,6 +3,8 @@ $(document).ready(function(){
   // Declare global variables
   var $window = $(window);
   var $animation_elements = $('.animation-element');
+  var panelClass = $('.panel').data('section-name');
+  var scroll_position = $(document).scrollTop();
 
   // Scrollify script for locking panels to screen
   $.scrollify({
@@ -34,8 +36,8 @@ $(document).ready(function(){
       if ((element_bottom_position >= window_top_position) && 
          (element_top_position <= window_bottom_position)) {
           // Animations and effects once screen is in viewport
-          $('.scenario').fadeIn(1000);
-          $('.response').fadeIn(2000);
+          $('.scenario').fadeIn(1500);
+          $('.response').fadeIn(2500);
           $('.detail-text-left').hide(); 
           $('.detail-text-right').hide();
           $element.addClass('viewable');
@@ -47,21 +49,26 @@ $(document).ready(function(){
         $element.removeClass('viewable');
       }
 
-
     });
   }
+
+  $(window).scroll(function(){
+
+    // Fades in the iPhone placeholder image depending on scroll position
+    if (scroll_position > 1750) {
+      $('#phoneImage').fadeOut(600);
+    }
+
+    else {
+      $('#phoneImage').fadeIn(800);
+    }
+  });
 
   $window.on('scroll resize', check_if_in_view);
   $window.trigger('scroll');
 
 });
 
-
-
-
-  // // Declare variables
-  // var $animation_elements = $('.animation-element');
-  // var $window = $(window);
 
 
   // // Hide elements as the default state
@@ -76,22 +83,13 @@ $(document).ready(function(){
   //   // $('.info-block-middle')fadeIn(1500);
   //   // $('.info-block-right')fadeOut(2500);
 
-  //   // var panelClass = $('.panel').data('section-name');
-  //   // alert(panelClass);
 
-  //   var scrollPos = $(document).scrollTop();
+
+ 
 
   //   // Hide info blocks on the About page 
   //   $('.info-block-left').hide();
   //   $('.info-block-middle').hide();
   //   $('.info-block-right').hide();
 
-  //   // Fades in the iPhone placeholder image depending on scroll position
-  //   if (scrollPos > 1750) {
-  //     $('#phoneImage').fadeOut(600);
-  //   }
-
-  //   else {
-  //     $('#phoneImage').fadeIn(800);
-  //   }
   // });

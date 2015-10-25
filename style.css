@@ -4,11 +4,15 @@
 @import url(https://fonts.googleapis.com/css?family=Enriqueta);
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300|Carme|Mallanna);
-@import url(https://fonts.googleapis.com/css?family=Nunito:300|Fira+Sans:200);
+@import url(https://fonts.googleapis.com/css?family=Nunito:300|Fira+Sans:200|Archivo+Narrow:300);
 
 .scroll {
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  width: 3em;
 	z-index: 200;
-	top: 190px;
+	display: block;
 }
 
 h1 {}
@@ -98,6 +102,26 @@ h3 {
   display: flex;
 	text-align: center;
 	height:100%;
+  width:100%;
+  z-index: 15;
+  overflow:hidden;
+}
+
+.flexbox-container-primary {
+	display: -webkit-flex;
+  display: flex;
+	text-align: center;
+	height:85%;
+  width:100%;
+  z-index: 15;
+  overflow:hidden;
+}
+
+.flexbox-container-secondary {
+	display: -webkit-flex;
+  display: flex;
+	text-align: center;
+	height:15%;
   width:100%;
   z-index: 15;
   overflow:hidden;
@@ -193,8 +217,8 @@ h3 {
 
 .detail-text, .detail-text-left, .detail-text-right {
 	text-transform: none;
-	font-family: 'Fira Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-	font-size: 16px;
+	font-family: 'Archivo Narrow:300','Fira Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	font-size: 18px;
 	font-weight: lighter;
 	text-align: center justify;
 	text-justify: inter-word;
@@ -228,6 +252,62 @@ h3 {
   height: auto;
   z-index: 100;
 
+}
+
+/************ARROW STYLING***********/
+
+.arrow-container {
+	display: block;
+	top: -0; left: 50%; bottom: 0; right: 0;
+	width: 100%;
+}
+
+.arrows {
+	width: 60px;
+	height: 102px;
+	display: block;	
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 200;
+}
+
+.arrows path {
+	stroke: #fff;
+	fill: transparent;
+	stroke-width: 2px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+	@keyframes arrow
+	{
+	0% {opacity:0}
+	40% {opacity:1}
+	80% {opacity:0}
+	100% {opacity:0}
+	}
+
+	@-webkit-keyframes arrow 
+	{
+	0% {opacity:0}
+	40% {opacity:1}
+	80% {opacity:0}
+	100% {opacity:0}
+	}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; 
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; 
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; 
 }
 
 /************HEART STYLING***********/
