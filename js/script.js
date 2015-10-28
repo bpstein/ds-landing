@@ -37,12 +37,12 @@ $(document).ready(function(){
          (element_top_position <= window_bottom_position)) {
           // Animations and effects once screen is in viewport
           $('.scenario').fadeIn(1500);
-          $('.response').fadeIn(2500);
+          $('.response').fadeIn(1900);
           $('.detail-text-left').hide(); 
           $('.detail-text-right').hide();
           $element.addClass('viewable');
-          $('.detail-text-left').fadeIn(3500);
-          $('.detail-text-right').fadeIn(9500);
+          $('.detail-text-left').fadeIn(1900);
+          $('.detail-text-right').fadeIn(2600);
       }
 
       else {
